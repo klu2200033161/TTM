@@ -1,0 +1,47 @@
+{% extends 'Navbar.html' %}
+{% load static %}
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TimeZone</title>
+</head>
+<body>
+<h1>
+    {{tz1}}
+</h1>
+{% block body %}
+<div>
+    <div class="container">
+  <div class="row">
+    <div class="col-sm-5 col-md-6">
+        <div>
+        <form method="post" action="{% url 'tzfunctionlogic' %}">
+        {% csrf_token %}
+        <br>
+            <h1>Welcome to Sailesh timezones</h1><br>
+            <h2>Enter your interested country</h2>
+<center><div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="{% url 'tz1' %}">Africa/Abidjan</a></li>
+    <li><a class="dropdown-item" href="{% url 'tz1' %}">Asia/Dubai</a></li>
+    <li><a class="dropdown-item" href="{% url 'tz1' %}">Asia/Kolkata</a></li>
+  </ul>
+</div>
+        <input type="text" name='t_value' required>
+        <button type="submit">Generate</button></center>
+    </form>
+            </div>
+    </div>
+    <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">SECOND HALF
+        <br><br><br>
+        <h1></h1>
+    {{ tz1 }}
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>

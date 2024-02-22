@@ -1,0 +1,35 @@
+{% extends 'Navbar.html' %}
+{% load static %}
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block body %}
+<div>
+<div class="row">
+  <div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">National tour</h5>
+        <p class="card-text">Travel with in the country</p>
+        <a href="https://www.makemytrip.com/" target="_blank" class="btn btn-primary">packages</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">International Tour</h5>
+        <p class="card-text">Travel the world</p>
+        <a href="https://www.yatra.com/" target="_blank" class="btn btn-primary">Packages</a>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+{% endblock %}
+</body>
+</html>
